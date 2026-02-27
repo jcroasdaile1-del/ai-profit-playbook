@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I Tested Hundreds of AI Prompts — Here Are the 5 That Actually Build Businesses</title>
+  <meta name="description" content="Most AI prompts produce generic output. After 6 months of testing, these 5 prompt patterns consistently produce actionable business results with ChatGPT and Claude.">
+  <meta property="og:title" content="5 AI Prompts That Actually Build Businesses">
+  <meta property="og:description" content="After testing hundreds of AI prompts, these 5 patterns consistently produce actionable business output.">
+  <meta property="og:type" content="article">
+  <meta name="keywords" content="AI prompts, ChatGPT prompts, business prompts, AI business, ChatGPT business, prompt engineering, AI for entrepreneurs">
+  <link rel="canonical" href="https://jcroasdaile1-del.github.io/ai-profit-playbook/blog/5-prompts-that-work">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --surface: #141414;
+      --border: #222;
+      --text: #e5e5e5;
+      --text-dim: #999;
+      --accent: #6ee7b7;
+      --accent-dark: #059669;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header */
+    header {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    header a:hover { text-decoration: underline; }
+
+    .logo {
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    /* Article */
+    article {
+      padding: 60px 0;
+    }
+
+    article h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      color: #fff;
+    }
+
+    .meta {
+      color: var(--text-dim);
+      font-size: 0.9rem;
+      margin-bottom: 40px;
+    }
+
+    article h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-top: 48px;
+      margin-bottom: 16px;
+      color: #fff;
+    }
+
+    article h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-top: 32px;
+      margin-bottom: 12px;
+      color: var(--accent);
+    }
+
+    article p {
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+
+    article strong { color: #fff; }
+
+    .prompt-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin: 16px 0 24px;
+      font-size: 0.92rem;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      color: var(--text);
+    }
+
+    .instead {
+      color: var(--text-dim);
+      font-style: italic;
+      margin-bottom: 8px;
+    }
+
+    .pattern-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    .pattern-list li {
+      padding: 8px 0 8px 28px;
+      position: relative;
+      color: var(--text);
+    }
+
+    .pattern-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* CTA Box */
+    .cta-box {
+      background: linear-gradient(135deg, #0a2e1a, #0a1a2e);
+      border: 1px solid var(--accent-dark);
+      border-radius: 12px;
+      padding: 40px 32px;
+      margin: 48px 0;
+      text-align: center;
+    }
+
+    .cta-box h2 {
+      margin-top: 0;
+      font-size: 1.4rem;
+    }
+
+    .cta-box p {
+      color: var(--text-dim);
+      margin-bottom: 24px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: var(--accent);
+      color: #000;
+      font-weight: 700;
+      padding: 14px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(110, 231, 179, 0.25);
+    }
+
+    .cta-subtext {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      margin-top: 12px;
+    }
+
+    /* Footer */
+    footer {
+      padding: 40px 0;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    @media (max-width: 640px) {
+      article h1 { font-size: 1.6rem; }
+      article h2 { font-size: 1.25rem; }
+      .cta-box { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <a href="/" class="logo">AI Profit Playbook</a>
+      <a href="https://croasdaile.gumroad.com/l/ai-profit-playbook">Get the Playbook &rarr;</a>
+    </div>
+  </header>
+
+  <article>
+    <div class="container">
+      <h1>I Tested Hundreds of AI Prompts for Building Businesses. Here Are the 5 That Actually Work.</h1>
+      <p class="meta">Published June 2025 &bull; 8 min read</p>
+
+      <p>Most AI prompts produce generic garbage. I know because I tested hundreds of them over 6 months while trying to build a side business using nothing but ChatGPT and Claude.</p>
+
+      <p>The problem isn't the AI — it's that we're asking the wrong questions. Vague prompts get vague answers. But when you add <strong>constraints, structure, and context</strong>, the same AI becomes genuinely useful.</p>
+
+      <p>Here are the 5 prompts that consistently produce actionable, money-relevant output:</p>
+
+      <h2>1. The Market Finder</h2>
+
+      <p class="instead">Instead of: "Give me business ideas"</p>
+
+      <div class="prompt-block">I want to find a profitable business idea I can build as a solo founder with AI tools. I have no budget. Analyze: must be digital, buildable in 2 weeks, proven demand, sellable for $10-$100, zero ongoing cost. For each idea give me the product, who buys it, where they hang out, and competitors' weaknesses.</div>
+
+      <p>The specificity forces the AI to think critically rather than just list generic "start a dropshipping store" suggestions. You get ideas that are actually scoped to your constraints — budget, timeline, audience, and competitive landscape.</p>
+
+      <h2>2. The Competitor Deep Dive</h2>
+
+      <p class="instead">Instead of: "Analyze my competitors"</p>
+
+      <div class="prompt-block">Analyze my top 5 competitors in [your niche]. For each one: their price point, 3 strengths, what their customers complain about (check reviews), their marketing channels, and gaps I could exploit that they're missing.</div>
+
+      <p>This prompt surfaces real opportunities. The "customer complaints" angle is especially powerful — it tells you exactly where to differentiate. When you know what people hate about existing products, you know what to build.</p>
+
+      <h2>3. The Stress Test</h2>
+
+      <p class="instead">Instead of: "Is this a good idea?"</p>
+
+      <div class="prompt-block">Stress-test this business idea by playing devil's advocate. Give me: top 5 reasons it fails, a mitigation strategy for each, worst case scenario, what needs to be true for it to hit $1K/month, and whether this is a vitamin (nice to have) or painkiller (must have).</div>
+
+      <p>Most people skip validation. This prompt forces brutal honesty before you invest time building something nobody wants. The "vitamin vs painkiller" distinction alone has saved me from building things no one would pay for.</p>
+
+      <h2>4. The Sales Page Writer</h2>
+
+      <p class="instead">Instead of: "Write a sales page"</p>
+
+      <div class="prompt-block">Write a complete sales page for [product]. Structure: start with their pain (make them feel seen), agitate what happens if unsolved, introduce the solution, list features as benefits, add a social proof section, specify who it's for and who it's NOT for, include a value anchor comparing to alternatives, add a guarantee, write a FAQ that handles the top 5 objections, and end with a PS line.</div>
+
+      <p>The output from this prompt is a complete, conversion-optimized sales page — not a vague paragraph. Every section has a specific job in the conversion funnel. This single prompt has saved me days of copywriting work.</p>
+
+      <h2>5. The Revenue Diagnosis</h2>
+
+      <p class="instead">Instead of: "How do I make more money?"</p>
+
+      <div class="prompt-block">My business makes $X/month. Traffic comes from Y. Conversion rate is Z%. Of the three levers (traffic, conversion, order value), which is my weakest link? What single change would have the most revenue impact? Give me 3 quick wins for this week and 1 long-term compounder.</div>
+
+      <p>This turns ChatGPT into a growth advisor that focuses on your actual bottleneck, not generic advice. By providing real numbers, you get specific, actionable recommendations instead of "try running ads."</p>
+
+      <h2>The Pattern: Specificity Beats Everything</h2>
+
+      <p>Notice the pattern? Every effective prompt has:</p>
+
+      <ul class="pattern-list">
+        <li><strong>Constraints</strong> — budget, timeline, audience limitations</li>
+        <li><strong>Structure</strong> — numbered lists, specific sections, exact format</li>
+        <li><strong>Context</strong> — real numbers, real situation, real limitations</li>
+        <li><strong>Expected output format</strong> — so you get something you can use immediately</li>
+      </ul>
+
+      <p>The more you constrain the AI, the better the output. <strong>Vague in = vague out.</strong> Specific in = actionable out.</p>
+
+      <h2>These 5 are just the beginning.</h2>
+
+      <p>I built these patterns into a complete system — 105 prompts that cover the full business lifecycle from "I have no idea what to sell" to "I'm scaling to $5K/month."</p>
+
+      <p>Each prompt includes when to use it, the full prompt with fill-in-the-blank placeholders, what output to expect, and pro tips for getting even better results.</p>
+
+      <div class="cta-box">
+        <h2>Want all 105 prompts?</h2>
+        <p>The AI Profit Playbook takes you from finding an idea to scaling revenue — using prompts that actually produce results.</p>
+        <a href="https://croasdaile.gumroad.com/l/ai-profit-playbook" class="cta-button">Get the Playbook — $19</a>
+        <p class="cta-subtext">Instant download &bull; Lifetime updates &bull; 30-day guarantee</p>
+      </div>
+
+      <p><em>What prompts have you found that consistently produce great output? I'd love to hear what works for others.</em></p>
+    </div>
+  </article>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 The AI Profit Playbook &bull; <a href="/">Home</a> &bull; <a href="https://croasdaile.gumroad.com/l/ai-profit-playbook">Get the Playbook</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
